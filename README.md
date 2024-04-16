@@ -17,10 +17,14 @@
 
 ## References
 - **C# How to use Classes and Objects**: [YouTube Video](https://www.youtube.com/watch?v=O8lc8MPxw64&list=PL4CCSwmU04Mh-1jjEBgpttAnZSA0bfhop&index=9)
-- **C# How to use Structs**: [YouTube Video](https://youtu.be/rX_0qrHd8RM?si=pj59t04bvQLeuo7X)
+- **C# How to use Structs**: [YouTube Video](https://youtu.be/rX_0qrHd8RM?si=pj59t04bvQLeuo7X)(https://github.com/ST10198206/ST10198206_PROG6221_PartOne/files/15000200/Recipe.App.Video.zip)
+
 - **C# How to use Arrays and Lists**: [YouTube Video](https://youtu.be/cmdBpKEEPbY?si=eB5M4NP_NVL_c8sh)
 
 ## Repository Link
 **GitHub**: https://github.com/ST10198206/ST10198206_PROG6221_PartOne.git
+
+## Recipe App Video
+[Recipe App Video.zip](https://github.com/ST10198206/ST10198206_PROG6221_PartOne/files/15000212/Recipe.App.Video.zip)
 
 
