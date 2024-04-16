@@ -39,7 +39,7 @@ namespace ST10198206_PROG221_PartOne
                 Console.ResetColor();
 
                 //Changes the colour of the text
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write("Unit of measurement: ");
                 string measurementunit = Console.ReadLine();
                 Console.ResetColor();
@@ -54,8 +54,10 @@ namespace ST10198206_PROG221_PartOne
             // Loops the number of steps that the user has inputed
             for (int i = 0; i < numSteps; i++)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write($"Step {i + 1}: ");
                 string description = Console.ReadLine();
+                Console.ResetColor();
 
                 recipe.AddStep(description);
             }
