@@ -8,7 +8,7 @@ namespace ST10198206_PROG221_PartOne
 {
     internal class Recipe
     {
-        //variables for ingredient
+        //Added variables for ingredient
         public struct Ingredient
         {
             public string Name;
