@@ -21,6 +21,6 @@
 - **C# How to use Arrays and Lists**: [YouTube Video](https://youtu.be/cmdBpKEEPbY?si=eB5M4NP_NVL_c8sh)
 
 ## Repository Link
-**GitHub**: 
+**GitHub**: https://github.com/ST10198206/ST10198206_PROG6221_PartOne.git
 
 
