@@ -86,6 +86,34 @@ namespace ST10198206_PROG221_PartOne
                 recipe.AddStep(description);
             }
 
+            // Ask the user if they want to scale the recipe
+            Console.WriteLine("\nDo you want to scale the recipe?");
+            Console.WriteLine("1. 0.5x");
+            Console.WriteLine("2. 1x (no scaling)");
+            Console.WriteLine("3. 2x");
+            Console.WriteLine("4. 3x");
+            Console.Write("Enter your choice: ");
+            int scaleChoice = int.Parse(Console.ReadLine());
+
+            double scaleFactor = 1.0;
+
+            switch (scaleChoice)
+            {
+                case 1:
+                    scaleFactor = 0.5;
+                    break;
+                case 3:
+                    scaleFactor = 2.0;
+                    break;
+                case 4:
+                    scaleFactor = 3.0;
+                    break;
+                default:
+                    break;
+            }
+
+            
+
             Console.WriteLine("\nRecipe added successfully!");
             Console.WriteLine("\nDisplaying recipe:");
 
