@@ -51,26 +51,37 @@ namespace ST10198206_PROG221_PartOne
             Console.Write("Number of ingredients: ");
             int numIngredients = int.Parse(Console.ReadLine());
 
+            //Error Handling for inputting number for Ingredients
+            while (!int.TryParse(Console.ReadLine(), out numIngredients) || numIngredients <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invalid input. Please enter a positive integer.");
+                Console.ResetColor();
+                Console.Write("Number of ingredients: ");
+            }
+
             //Creates a loop for the amount of the ingredients inputted by the user
             for (int i = 0; i < numIngredients; i++)
             {
-                //Changes the colour of the text
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                
                 Console.Write("Ingredient name: ");
                 string name = Console.ReadLine();
-                Console.ResetColor();
 
-                //Changes the colour of the text
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.Write("Quantity of Ingredient: ");
-                double quantity = double.Parse(Console.ReadLine());
-                Console.ResetColor();
 
-                //Changes the colour of the text
-                Console.ForegroundColor = ConsoleColor.Blue;
+
+                Console.Write("Quantity of ingredients: ");
+                double quantity = int.Parse(Console.ReadLine());
+                while (!double.TryParse(Console.ReadLine(), out quantity) || quantity <= 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid input. Please enter a positive number for quantity.");
+                    Console.ResetColor();
+                    Console.Write("Quantity of Ingredient: ");
+                }
+                
                 Console.Write("Unit of measurement: ");
                 string measurementunit = Console.ReadLine();
-                Console.ResetColor();
+
 
                 recipe.AddIngredient(name, quantity, measurementunit);
             }
@@ -82,10 +93,9 @@ namespace ST10198206_PROG221_PartOne
             // Loops the number of steps that the user has inputed
             for (int i = 0; i < numSteps; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write($"Step {i + 1}: ");
                 string description = Console.ReadLine();
-                Console.ResetColor();
+               
 
                 recipe.AddStep(description);
             }
@@ -104,7 +114,8 @@ namespace ST10198206_PROG221_PartOne
             switch (scaleChoice)
             {
                 case 1:
-                    scaleFactor = 0.5 ;
+                    scaleFactor = 0.5;
+                  
                     break;
                 case 3:
                     scaleFactor = 2.0;
@@ -116,7 +127,6 @@ namespace ST10198206_PROG221_PartOne
                     break;
             }
 
-            
 
             Console.WriteLine("\nRecipe added successfully!");
             Console.WriteLine("\nDisplaying recipe:");
