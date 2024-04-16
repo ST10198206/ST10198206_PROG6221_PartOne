@@ -16,6 +16,8 @@ namespace ST10198206_PROG221_PartOne
             Recipe recipe = new Recipe();
 
             Console.WriteLine("Enter recipe details:");
+            
+            
 
             //Ask the user for the number of ingredients
             Console.Write("Number of ingredients: ");
@@ -24,14 +26,23 @@ namespace ST10198206_PROG221_PartOne
             //Creates a loop for the amount of the ingredients inputted by the user
             for (int i = 0; i < numIngredients; i++)
             {
+                //Changes the colour of the text
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("Ingredient name: ");
                 string name = Console.ReadLine();
+                Console.ResetColor();
 
+                //Changes the colour of the text
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write("Quantity of Ingredient: ");
                 double quantity = double.Parse(Console.ReadLine());
+                Console.ResetColor();
 
+                //Changes the colour of the text
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Unit of measurement: ");
                 string measurementunit = Console.ReadLine();
+                Console.ResetColor();
 
                 recipe.AddIngredient(name, quantity, measurementunit);
 
@@ -48,10 +59,16 @@ namespace ST10198206_PROG221_PartOne
 
                 recipe.AddStep(description);
             }
-
+            
             Console.WriteLine("\nRecipe added successfully!");
             Console.WriteLine("\nDisplaying recipe:");
+            
+            //Change the colours of the Displayed text
+            Console.ForegroundColor = ConsoleColor.Magenta;
             recipe.DisplayRecipe();
+            Console.ResetColor();
+            
+           
 
 
 

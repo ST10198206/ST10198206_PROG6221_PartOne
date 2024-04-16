@@ -71,13 +71,4 @@ namespace ST10198206_PROG221_PartOne
     }
 
 
-
 }
-
-
-
-
-
-//Classes and Objects: https://www.youtube.com/watch?v=O8lc8MPxw64&list=PL4CCSwmU04Mh-1jjEBgpttAnZSA0bfhop&index=9 
-//Using Structs: https://youtu.be/rX_0qrHd8RM?si=pj59t04bvQLeuo7X
-//Using Arrays and Lists: https://youtu.be/cmdBpKEEPbY?si=eB5M4NP_NVL_c8sh
