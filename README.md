@@ -9,7 +9,7 @@
 3. **Input Recipe Details**
     - User entered the number of ingredients 
     - For each ingredient, user inputs the name, quantity and unit of measurement.
-    - The it would ask the user provide the number of steps in your recipe.
+    - It would then ask the user to provide the number of steps in the recipe.
     - For each step the user would input a description.
 
 4. **View Recipe**
