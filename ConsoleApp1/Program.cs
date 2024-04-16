@@ -7,17 +7,41 @@ using System.Threading.Tasks;
 
 namespace ST10198206_PROG221_PartOne
 {
-
     class Program
     {
         static void Main(string[] args)
+        {
+            bool exitRequested = false;
+
+            while (!exitRequested)
+            {
+                Console.WriteLine("Menu:");
+                Console.WriteLine("1. Add Recipe");
+                Console.WriteLine("2. Exit");
+                Console.Write("Enter your choice: ");
+                string choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        AddRecipe();
+                        break;
+                    case "2":
+                        exitRequested = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+                        break;
+                }
+            }
+        }
+
+        static void AddRecipe()
         {
             //Class Name Object Name = new Constructor
             Recipe recipe = new Recipe();
 
             Console.WriteLine("Enter recipe details:");
-            
-            
 
             //Ask the user for the number of ingredients
             Console.Write("Number of ingredients: ");
@@ -45,8 +69,8 @@ namespace ST10198206_PROG221_PartOne
                 Console.ResetColor();
 
                 recipe.AddIngredient(name, quantity, measurementunit);
-
             }
+
             //Ask the user for the number of steps 
             Console.Write("Number of steps: ");
             int numSteps = int.Parse(Console.ReadLine());
@@ -61,23 +85,18 @@ namespace ST10198206_PROG221_PartOne
 
                 recipe.AddStep(description);
             }
-            
+
             Console.WriteLine("\nRecipe added successfully!");
             Console.WriteLine("\nDisplaying recipe:");
-            
+
             //Change the colours of the Displayed text
             Console.ForegroundColor = ConsoleColor.Magenta;
             recipe.DisplayRecipe();
             Console.ResetColor();
-            
-           
-
-
-
         }
     }
-
 }
+
 
 //C# How to use Classes and Objects. 2016. YouTube video, added by Renaissance Coders. [Online]. Available at: https://www.youtube.com/watch?v=O8lc8MPxw64&list=PL4CCSwmU04Mh-1jjEBgpttAnZSA0bfhop&index=9 
 //C# How to use Structs. 2016. Youtube video, added by Renaissance Coders. [Online]. Available at: https://youtu.be/rX_0qrHd8RM?si=pj59t04bvQLeuo7X
