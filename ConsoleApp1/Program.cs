@@ -19,7 +19,9 @@ namespace ST10198206_PROG221_PartOne
             {
                 Console.WriteLine("Menu:");
                 Console.WriteLine("1. Add Recipe");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("2. Exit");
+                Console.ResetColor();
                 Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine();
 
@@ -47,11 +49,10 @@ namespace ST10198206_PROG221_PartOne
 
             Console.WriteLine("Enter recipe details:");
 
-            //Ask the user for the number of ingredients
-            Console.Write("Number of ingredients: ");
-            int numIngredients = int.Parse(Console.ReadLine());
 
             //Error Handling for inputting number for Ingredients
+            Console.Write("Number of ingredients: ");
+            int numIngredients;
             while (!int.TryParse(Console.ReadLine(), out numIngredients) || numIngredients <= 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -67,10 +68,8 @@ namespace ST10198206_PROG221_PartOne
                 Console.Write("Ingredient name: ");
                 string name = Console.ReadLine();
 
-
-
                 Console.Write("Quantity of ingredients: ");
-                double quantity = int.Parse(Console.ReadLine());
+                double quantity;
                 while (!double.TryParse(Console.ReadLine(), out quantity) || quantity <= 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -84,6 +83,8 @@ namespace ST10198206_PROG221_PartOne
 
 
                 recipe.AddIngredient(name, quantity, measurementunit);
+
+                recipe.Scaling(quantity);
             }
 
             //Ask the user for the number of steps 
@@ -100,39 +101,12 @@ namespace ST10198206_PROG221_PartOne
                 recipe.AddStep(description);
             }
 
-            // Ask the user if they want to scale the recipe
-            Console.WriteLine("\nDo you want to scale the recipe?");
-            Console.WriteLine("1. 0.5x");
-            Console.WriteLine("2. 1x (no scaling)");
-            Console.WriteLine("3. 2x");
-            Console.WriteLine("4. 3x");
-            Console.Write("Enter your choice: ");
-            int scaleChoice = int.Parse(Console.ReadLine());
-
-            double scaleFactor = 1.0;
-
-            switch (scaleChoice)
-            {
-                case 1:
-                    scaleFactor = 0.5;
-                  
-                    break;
-                case 3:
-                    scaleFactor = 2.0;
-                    break;
-                case 4:
-                    scaleFactor = 3.0;
-                    break;
-                default:
-                    break;
-            }
-
 
             Console.WriteLine("\nRecipe added successfully!");
             Console.WriteLine("\nDisplaying recipe:");
 
             //Change the colours of the Displayed text
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.Green;
             recipe.DisplayRecipe();
             Console.ResetColor();
         }

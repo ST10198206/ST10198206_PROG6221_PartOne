@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -64,6 +65,41 @@ namespace ST10198206_PROG221_PartOne
                 Console.WriteLine($"{i + 1}. {Steps[i].Description}");
             }
 
+        }
+
+        public void Scaling(double Quantity)
+        {
+
+            // Ask the user if they want to scale the recipe
+            Console.WriteLine("\nDo you want to scale the recipe?");
+            Console.WriteLine("1. 0.5x");
+            Console.WriteLine("2. 1x (no scaling)");
+            Console.WriteLine("3. 2x");
+            Console.WriteLine("4. 3x");
+            Console.Write("Enter your choice: ");
+
+            int scaleChoice = int.Parse(Console.ReadLine());
+
+
+            double scaleFactor;
+
+            switch (scaleChoice)
+            {
+                case 1:
+                    scaleFactor = 0.5 * Quantity;
+
+                    break;
+                case 3:
+                    scaleFactor = 2.0 * Quantity;
+                    break;
+                case 4:
+                    scaleFactor = 3.0 * Quantity;
+                    break;
+                default:
+                    break;
+            }
+
+        }
 
         }
 
@@ -71,4 +107,3 @@ namespace ST10198206_PROG221_PartOne
     }
 
 
-}
