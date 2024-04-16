@@ -11,8 +11,10 @@ namespace ST10198206_PROG221_PartOne
     {
         static void Main(string[] args)
         {
+            //Created a menu for the user to select an option 
             bool exitRequested = false;
 
+            //Breaks program when user selects option 2
             while (!exitRequested)
             {
                 Console.WriteLine("Menu:");
@@ -21,6 +23,7 @@ namespace ST10198206_PROG221_PartOne
                 Console.Write("Enter your choice: ");
                 string choice = Console.ReadLine();
 
+                //Case and switch used for creating menu
                 switch (choice)
                 {
                     case "1":
@@ -36,6 +39,7 @@ namespace ST10198206_PROG221_PartOne
             }
         }
 
+        //Add recipie option
         static void AddRecipe()
         {
             //Class Name Object Name = new Constructor
@@ -100,7 +104,7 @@ namespace ST10198206_PROG221_PartOne
             switch (scaleChoice)
             {
                 case 1:
-                    scaleFactor = 0.5;
+                    scaleFactor = 0.5 ;
                     break;
                 case 3:
                     scaleFactor = 2.0;
